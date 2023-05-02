@@ -15,9 +15,15 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom'
   },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, './src')
+    }
+  },
   build: {
+    sourcemap: true,
     lib: {
-      entry: path.resolve(__dirname, 'src/index.ts'),
+      entry: path.resolve(__dirname, 'src/main.ts'),
       name: 'synthatic-blood-ui',
       formats: ['es', 'umd'],
       fileName: (format) => `synthatic-blood-ui.${format}.js`
