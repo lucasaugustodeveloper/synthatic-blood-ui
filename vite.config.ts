@@ -23,7 +23,7 @@ export default defineConfig({
   build: {
     sourcemap: true,
     lib: {
-      entry: path.resolve(__dirname, 'src/main.ts'),
+      entry: path.resolve(__dirname, 'src/main.tsx'),
       name: 'synthatic-blood-ui',
       formats: ['es', 'umd'],
       fileName: (format) => `synthatic-blood-ui.${format}.js`
