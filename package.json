@@ -1,10 +1,7 @@
 {
-  "name": "@laugustofrontend/ui-library-tailwind",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/laugustofrontend"
-  },
-  "private": true,
-  "version": "0.0.1",
+  "name": "@laugustofrontend/synthatic-blood-ui",
+  "private": false,
+  "version": "0.0.18",
   "type": "module",
   "scripts": {
     "dev": "vite",
