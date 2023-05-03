@@ -1,5 +1,8 @@
 {
-  "name": "ui-library-tailwind",
+  "name": "@laugustofrontend/ui-library-tailwind",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/laugustofrontend"
+  },
   "private": true,
   "version": "0.0.1",
   "type": "module",
