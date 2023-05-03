@@ -1,6 +1,19 @@
 name: Generate tag version
 description: 'Provides automated versioning of your commits using git tags each time your CI/CD workflow runs.'
 
+on:
+  workflow_dispath:
+    inputs:
+      version:
+        description: New version
+        required: true
+        default: 'path'
+        type: choise
+        options:
+          - path
+          - minor
+          - major
+
 branding:
   icon: 'tag'
   color: 'purple'
