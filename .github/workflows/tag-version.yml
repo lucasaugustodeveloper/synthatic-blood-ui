@@ -36,12 +36,12 @@ jobs:
       # - name: Generate new version
       #   run: npm version ${{ github.event.inputs.version }}
       - name: Generate new version
-          id: version
-          uses: juliansangillo/tag-vesion@v1
-          with:
-            production-branch: main
-            test-branch: test
-            dev-branch: develop
+        id: version
+        uses: juliansangillo/tag-vesion@v1
+        with:
+          production-branch: main
+          test-branch: test
+          dev-branch: develop
         
       - name: Push new version tag to repository
         run: git push origin main --tags
