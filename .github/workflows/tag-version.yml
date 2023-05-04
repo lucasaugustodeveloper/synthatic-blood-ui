@@ -33,15 +33,8 @@ jobs:
         with:
           node-version: 18.x
       
-      # - name: Generate new version
-      #   run: npm version ${{ github.event.inputs.version }}
       - name: Generate new version
-        id: version
-        uses: juliansangillo/tag-version@v1.5
-        with:
-          production-branch: main
-          test-branch: test
-          dev-branch: develop
+        run: npm version ${{ github.event.inputs.version }}
         
       - name: Push new version tag to repository
         run: git push origin main --tags
