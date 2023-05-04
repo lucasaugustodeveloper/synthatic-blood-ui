@@ -12,6 +12,9 @@ on:
           - patch
           - minor
           - major
+  push:
+    branches:
+      - main
           
 jobs:
   version:
@@ -30,8 +33,15 @@ jobs:
         with:
           node-version: 18.x
       
+      # - name: Generate new version
+      #   run: npm version ${{ github.event.inputs.version }}
       - name: Generate new version
-        run: npm version ${{ github.event.inputs.version }}
+          id: version
+          uses: juliansangillo/tag-vesion@v1
+          with:
+            production-branch: main
+            test-branch: test
+            dev-branch: develop
         
       - name: Push new version tag to repository
         run: git push origin main --tags
