@@ -10,7 +10,7 @@ const meta: Meta<typeof Button> = {
 type Story = StoryObj<typeof Button>
 
 export const Basic: Story = {
-  render: () => <Button />
+  render: () => <Button text="Button" fullWidth />
 }
 
 export default meta
